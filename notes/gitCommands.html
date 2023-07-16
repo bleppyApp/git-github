@@ -1,0 +1,84 @@
+<h1>GIT Commands</h1>
+
+<ul>
+
+    <li>
+        <b>git status</b>
+        <p>gives status on a git repository and its contents</p>
+    </li>
+
+    <li>
+        <b>git init</b>
+        <p>creates a new repository for the current folder. Before initialize a repo, run git status first to make sure
+            that the current location is not being watched by git.</p>
+    </li>
+
+    <li>
+        <b>git add</b>
+        <p>stages changes before you can commit them. To stage multiple files at once, separate files with spaces, like:
+            git add file1 file2</p>
+    </li>
+
+    <li>
+        <b>git add .</b>
+        <p>stages all changes at once</p>
+    </li>
+
+    <li>
+        <b>git rm --cached fileName</b>
+        <p>unstages a staged file</p>
+    </li>
+
+    <li>
+        <b>git commit -m "my message about the commitment"</b>
+        <p>moves the staged changes from the staging area to the repository.</p>
+    </li>
+
+    
+    <li>
+        <b>git commit -a -m "my message about the commitment"</b>
+        <p>shortcut for staging and committing all files at once.</p>
+    </li>
+
+    <li>
+        <b>git commit --amend</b>
+        <p>allows you to add a forgotten file(s) to the last commit or edit the message from the last commit. If the idea
+            is to add a file, you'll have to stage it first with get add.</p>
+    </li>
+
+    <li>
+        <b>git branch</b>
+        <p>gives the list of existing branches. And the one with an * is the active branch</p>
+    </li>
+
+    <li>
+        <b>git branch name_of_branch</b>
+        <p>creates a new branch but it does not switch to it.</p>
+    </li>
+
+    <li>
+        <b>git switch name_of_branch</b>
+        <p>goes to the named branch</p>
+    </li>
+
+    <li>
+        <b>git switch -c name_of_branch</b>
+        <p>creates a new branch and navigates to it at once</p>
+    </li>
+
+    <li>
+        <b>git branch -m newName</b>
+        <p>modifies/renames the current branch</p>
+    </li>
+
+    <li>
+        <b><b>git branch -d name_of_branch</b></b>
+        <p>deletes branch. However, to make this work, this branch has be merged first. If you don't want to merge it, you can force the deletion by using uppercase d, -D, instead of -d</p>
+    </li>
+
+    <li>
+        <b></b>
+        <p></p>
+    </li>
+
+</ul>
