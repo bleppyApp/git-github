@@ -1,0 +1,30 @@
+<h1>Merge Workflow</h1>
+<nav>
+    <a href="./commandLine.html">Command Line</a>
+    <a href="./gitBasicWorkflow.html">Basic Workflow</a>
+    <a href="./gitCommands.html">Git Commands</a>
+    <a href="./highlights.html">Highlights</a>
+    <a href="./mergeWorkflow.html">Merges</a>
+</nav>
+
+<ul>
+    <li>
+        <h2>Fast-forward merge:</h2>
+        <p>When there is only one new branch and all the changes are made there. Then, all you need is to merge the new branch to the master.</p>
+        <ol>
+            <li>Switch to the branch you want to be merged, the destination. In this case, to master. <b>(git switch master)</b></li>
+            <li>Merge the new branch. <b>(git merge newBranchName)</b></li>
+        </ol>
+    </li>
+
+    <li>
+        <h2>Resolving Conflicts</h2>
+        <p>Whenever you encounter merge conflicts, follow these steps:</p>
+        <ol>
+            <li>Open up the conflicting file(s)</li>
+            <li>Solve the conflicts however is best</li>
+            <li>Remove the conflict marks that were added by GIT</li>
+            <li>Stage and commit changes</li>
+        </ol>
+    </li>
+</ul>
