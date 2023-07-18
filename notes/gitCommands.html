@@ -1,5 +1,13 @@
 <h1>GIT Commands</h1>
 
+<nav>
+    <a href="./commandLine.html">Command Line</a>
+    <a href="./gitBasicWorkflow.html">Basic Workflow</a>
+    <a href="./gitCommands.html">Git Commands</a>
+    <a href="./highlights.html">Highlights</a>
+    <a href="./mergeWorkflow.html">Merges</a>
+</nav>
+
 <ul>
 
     <li>
@@ -29,6 +37,8 @@
         <p>unstages a staged file</p>
     </li>
 
+    <h2>Commit</h2>
+
     <li>
         <b>git commit -m "my message about the commitment"</b>
         <p>moves the staged changes from the staging area to the repository.</p>
@@ -43,12 +53,19 @@
     <li>
         <b>git commit --amend</b>
         <p>allows you to add a forgotten file(s) to the last commit or edit the message from the last commit. If the idea
-            is to add a file, you'll have to stage it first with get add.</p>
+            is to add a file, you'll have to stage it first with git add.</p>
     </li>
+
+    <h2>Branch</h2>
 
     <li>
         <b>git branch</b>
         <p>gives the list of existing branches. And the one with an * is the active branch</p>
+    </li>
+
+    <li>
+        <b>git branch -v</b>
+        <p>gives the list of existing branches, and their last commitment message.</p>
     </li>
 
     <li>
@@ -73,7 +90,14 @@
 
     <li>
         <b><b>git branch -d name_of_branch</b></b>
-        <p>deletes branch. However, to make this work, this branch has be merged first. If you don't want to merge it, you can force the deletion by using uppercase d, -D, instead of -d</p>
+        <p>deletes branch. However, to make this work, this branch has be merged first. If you don't want to merge it, you can force the deletion by using uppercase d, -D, instead of -d. Remember to leave the branch before deleting it.</p>
+    </li>
+
+    <h2>Merge</h2>
+
+    <li>
+        <b>git merge branchName</b>
+        <p>before merging, remember to switch to the master or the branch that you want the current branch to be merged into.</p>
     </li>
 
     <li>
