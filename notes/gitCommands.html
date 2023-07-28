@@ -44,7 +44,7 @@
         <p>moves the staged changes from the staging area to the repository.</p>
     </li>
 
-    
+
     <li>
         <b>git commit -a -m "my message about the commitment"</b>
         <p>shortcut for staging and committing all files at once.</p>
@@ -52,7 +52,8 @@
 
     <li>
         <b>git commit --amend</b>
-        <p>allows you to add a forgotten file(s) to the last commit or edit the message from the last commit. If the idea
+        <p>allows you to add a forgotten file(s) to the last commit or edit the message from the last commit. If the
+            idea
             is to add a file, you'll have to stage it first with git add.</p>
     </li>
 
@@ -90,14 +91,52 @@
 
     <li>
         <b><b>git branch -d name_of_branch</b></b>
-        <p>deletes branch. However, to make this work, this branch has be merged first. If you don't want to merge it, you can force the deletion by using uppercase d, -D, instead of -d. Remember to leave the branch before deleting it.</p>
+        <p>deletes branch. However, to make this work, this branch has be merged first. If you don't want to merge it,
+            you can force the deletion by using uppercase d, -D, instead of -d. Remember to leave the branch before
+            deleting it.</p>
     </li>
 
     <h2>Merge</h2>
 
     <li>
         <b>git merge branchName</b>
-        <p>before merging, remember to switch to the master or the branch that you want the current branch to be merged into.</p>
+        <p>before merging, remember to switch to the master or the branch that you want the current branch to be merged
+            into.</p>
+    </li>
+
+    <h2>Diff</h2>
+
+    <li>
+        <b>git diff</b>
+        <p>shows the difference between the staging area (everything that was staged but not committed yet) and the
+            working directory</p>
+    </li>
+
+    <li>
+        <b>git diff HEAD</b>
+        <p>lists all changes in the working tree since your last commit, including staged and unstaged changes.</p>
+    </li>
+
+    <li>
+        <b>git diff --staged OR --cached</b>
+        <p>lists the difference between the staging area and the last commit</p>
+    </li>
+
+    <li>
+        <b>git diff (HEAD or --staged or nothing) fileName </b>
+        <p>will show the differences inside the specific file</p>
+    </li>
+
+    <li>
+        <b>git diff branch1..branch2 </b>
+        <p>show differences between two branches. In this case, the order matters. branch1 will occupy the "old" or "a"
+            or "---" and branch2 will be the "new" or "b" or "+++"</p>
+    </li>
+    
+    <li>
+        <b>git diff commit1..commit2 </b>
+        <p>show differences between two commits. In this case, the order matters. commit1 will occupy the "old" or "a"
+            or "---" and commit2 will be the "new" or "b" or "+++"</p>
     </li>
 
     <li>
