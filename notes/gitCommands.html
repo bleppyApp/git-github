@@ -1,147 +1,353 @@
-<h1>GIT Commands</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<nav>
-    <a href="./commandLine.html">Command Line</a>
-    <a href="./gitBasicWorkflow.html">Basic Workflow</a>
-    <a href="./gitCommands.html">Git Commands</a>
-    <a href="./highlights.html">Highlights</a>
-    <a href="./mergeWorkflow.html">Merges</a>
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Git Commands</title>
+</head>
 
-<ul>
+<body>
+    <nav>
+        <a href="./commandLine.html">Command Line</a>
+        <a href="./gitBasicWorkflow.html">Basic Workflow</a>
+        <a href="./gitCommands.html">Git Commands</a>
+        <a href="./highlights.html">Highlights</a>
+        <a href="./mergeWorkflow.html">Merges</a>
+    </nav>
 
-    <li>
-        <b>git status</b>
-        <p>gives status on a git repository and its contents</p>
-    </li>
+    <dl>
 
-    <li>
-        <b>git init</b>
-        <p>creates a new repository for the current folder. Before initialize a repo, run git status first to make sure
-            that the current location is not being watched by git.</p>
-    </li>
+        <h1>GIT Commands</h1>
 
-    <li>
-        <b>git add</b>
-        <p>stages changes before you can commit them. To stage multiple files at once, separate files with spaces, like:
-            git add file1 file2</p>
-    </li>
+        <section>
+            <h2>Basic Commands</h2>
 
-    <li>
-        <b>git add .</b>
-        <p>stages all changes at once</p>
-    </li>
+            <div class="card">
+                <dt><b>git status</b>
+                    <p>copy</p>
+                </dt>
+                <dd>gives status on a git repository and its contents</dd>
+            </div>
 
-    <li>
-        <b>git rm --cached fileName</b>
-        <p>unstages a staged file</p>
-    </li>
+            <div class="card">
+                <dt><b>git init</b>
+                    <p>copy</p>
+                </dt>
+                <dd>creates a new repository for the current folder. Before initialize a repo, run git status first to
+                    make
+                    sure
+                    that the current location is not being watched by git.</dd>
+            </div>
 
-    <h2>Commit</h2>
+            <div class="card">
+                <dt><b>git add</b>
+                    <p>copy</p>
+                </dt>
+                <dd>stages changes before you can commit them. To stage multiple files at once, separate files with
+                    spaces,
+                    like:
+                    git add file1 file2</dd>
+            </div>
 
-    <li>
-        <b>git commit -m "my message about the commitment"</b>
-        <p>moves the staged changes from the staging area to the repository.</p>
-    </li>
+            <div class="card">
+                <dt><b>git add .</b>
+                    <p>copy</p>
+                </dt>
+                <dd>stages all changes at once</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git rm --cached fileName</b>
+                    <p>copy</p>
+                </dt>
+                <dd>unstages a staged file</dd>
+            </div>
+        </section>
+
+        <section>
+            <h2>Commit</h2>
+
+            <div class="card">
+                <dt><b>git commit -m "my message about the commitment"</b>
+                    <p>copy</p>
+                </dt>
+                <dd>moves the staged changes from the staging area to the repository.</dd>
+            </div>
 
 
-    <li>
-        <b>git commit -am "my message about the commitment"</b>
-        <p>shortcut for staging and committing all files at once.</p>
-    </li>
+            <div class="card">
+                <dt><b>git commit -am "my message about the commitment"</b>
+                    <p>copy</p>
+                </dt>
+                <dd>shortcut for staging and committing all files at once.</dd>
+            </div>
 
-    <li>
-        <b>git commit --amend</b>
-        <p>allows you to add a forgotten file(s) to the last commit or edit the message from the last commit. If the
-            idea
-            is to add a file, you'll have to stage it first with git add.</p>
-    </li>
+            <div class="card">
+                <dt><b>git commit --amend</b>
+                    <p>copy</p>
+                </dt>
+                <dd>allows you to add a forgotten file(s) to the last commit or edit the message from the last commit.
+                    If
+                    the
+                    idea
+                    is to add a file, you'll have to stage it first with git add.</dd>
+            </div>
+        </section>
 
-    <h2>Branch</h2>
+        <section>
+            <h2>Branch</h2>
 
-    <li>
-        <b>git branch</b>
-        <p>gives the list of existing branches. And the one with an * is the active branch</p>
-    </li>
+            <div class="card">
+                <dt><b>git branch</b>
+                    <p>copy</p>
+                </dt>
+                <dd>gives the list of existing branches. And the one with an * is the active branch</dd>
+            </div>
 
-    <li>
-        <b>git branch -v</b>
-        <p>gives the list of existing branches, and their last commitment message.</p>
-    </li>
+            <div class="card">
+                <dt><b>git branch -v</b>
+                    <p>copy</p>
+                </dt>
+                <dd>gives the list of existing branches, and their last commitment message.</dd>
+            </div>
 
-    <li>
-        <b>git branch name_of_branch</b>
-        <p>creates a new branch but it does not switch to it.</p>
-    </li>
+            <div class="card">
+                <dt><b>git branch name_of_branch</b>
+                    <p>copy</p>
+                </dt>
+                <dd>creates a new branch based on HEAD but it does not switch to it.</dd>
+            </div>
 
-    <li>
-        <b>git switch name_of_branch</b>
-        <p>goes to the named branch</p>
-    </li>
+            <div class="card">
+                <dt><b>git switch name_of_branch</b>
+                    <p>copy</p>
+                </dt>
+                <dd>goes to the named branch</dd>
+            </div>
 
-    <li>
-        <b>git switch -c name_of_branch</b>
-        <p>creates a new branch and navigates to it at once</p>
-    </li>
+            <div class="card">
+                <dt><b>git switch -c name_of_branch</b>
+                    <p>copy</p>
+                </dt>
+                <dd>creates a new branch and navigates to it at once</dd>
+            </div>
 
-    <li>
-        <b>git branch -m newName</b>
-        <p>modifies/renames the current branch</p>
-    </li>
+            <div class="card">
+                <dt><b>git branch -m newName</b>
+                    <p>copy</p>
+                </dt>
+                <dd>modifies/renames the current branch</dd>
+            </div>
 
-    <li>
-        <b><b>git branch -d name_of_branch</b></b>
-        <p>deletes branch. However, to make this work, this branch has be merged first. If you don't want to merge it,
-            you can force the deletion by using uppercase d, -D, instead of -d. Remember to leave the branch before
-            deleting it.</p>
-    </li>
+            <div class="card">
+                <dt><b>
+                <dt><b>git branch -d name_of_branch</b>
+                    <p>copy</p></b>
+                    <p>copy</p>
+                </dt>
+                <dd>deletes branch. However, to make this work, this branch has be merged first. If you don't want to
+                    merge
+                    it,
+                    you can force the deletion by using uppercase d, -D, instead of -d. Remember to leave the branch
+                    before
+                    deleting it.</dd>
+            </div>
+        </section>
 
-    <h2>Merge</h2>
+        <section>
+            <h2>Merge</h2>
 
-    <li>
-        <b>git merge branchName</b>
-        <p>before merging, remember to switch to the master or the branch that you want the current branch to be merged
-            into.</p>
-    </li>
+            <div class="card">
+                <dt><b>git merge branchName</b>
+                    <p>copy</p>
+                </dt>
+                <dd>before merging, remember to switch to the master or the branch that you want the current branch to
+                    be
+                    merged
+                    into.</dd>
+            </div>
+        </section>
 
-    <h2>Diff</h2>
+        <section>
+            <h2>Diff</h2>
 
-    <li>
-        <b>git diff</b>
-        <p>shows the difference between the staging area (everything that was staged but not committed yet) and the
-            working directory</p>
-    </li>
+            <div class="card">
+                <dt><b>git diff</b>
+                    <p>copy</p>
+                </dt>
+                <dd>shows the difference between the staging area (everything that was staged but not committed yet) and
+                    the
+                    working directory</dd>
+            </div>
 
-    <li>
-        <b>git diff HEAD</b>
-        <p>lists all changes in the working tree since your last commit, including staged and unstaged changes.</p>
-    </li>
+            <div class="card">
+                <dt><b>git diff HEAD</b>
+                    <p>copy</p>
+                </dt>
+                <dd>lists all changes in the working tree since your last commit, including staged and unstaged changes.
+                </dd>
+            </div>
 
-    <li>
-        <b>git diff --staged OR --cached</b>
-        <p>lists the difference between the staging area and the last commit</p>
-    </li>
+            <div class="card">
+                <dt><b>git diff --staged</b>
+                    <p>copy</p>
+                </dt>
+                <dt><b>git diff --cached</b>
+                    <p>copy</p>
+                </dt>
+                <dd>lists the difference between the staging area and the last commit</dd>
+            </div>
 
-    <li>
-        <b>git diff (HEAD or --staged or nothing) fileName </b>
-        <p>will show the differences inside the specific file</p>
-    </li>
+            <div class="card">
+                <dt><b>git diff (HEAD or --staged or nothing) fileName </b>
+                    <p>copy</p>
+                </dt>
+                <dd>will show the differences inside the specific file</dd>
+            </div>
 
-    <li>
-        <b>git diff branch1..branch2 </b>
-        <p>show differences between two branches. In this case, the order matters. branch1 will occupy the "old" or "a"
-            or "---" and branch2 will be the "new" or "b" or "+++"</p>
-    </li>
-    
-    <li>
-        <b>git diff commit1..commit2 </b>
-        <p>show differences between two commits. In this case, the order matters. commit1 will occupy the "old" or "a"
-            or "---" and commit2 will be the "new" or "b" or "+++"</p>
-    </li>
+            <div class="card">
+                <dt><b>git diff branch1..branch2 </b>
+                    <p>copy</p>
+                </dt>
+                <dd>show differences between two branches. In this case, the order matters. branch1 will occupy the
+                    "old" or
+                    "a"
+                    or "---" and branch2 will be the "new" or "b" or "+++"</dd>
+            </div>
 
-    <li>
-        <b></b>
-        <p></p>
-    </li>
+            <div class="card">
+                <dt><b>git diff commit1..commit2 </b>
+                    <p>copy</p>
+                </dt>
+                <dd>show differences between two commits. In this case, the order matters. commit1 will occupy the "old"
+                    or
+                    "a"
+                    or "---" and commit2 will be the "new" or "b" or "+++"</dd>
+            </div>
+        </section>
 
-</ul>
+        <section>
+            <h2>Stash</h2>
+
+            <div class="card">
+                <dt><b>git stash</b>
+                    <p>copy</p>
+                </dt>
+                <dd>cleans the working tree and saves staged and unstaged changes, so they don't move branches with you
+                    if
+                    you're
+                    don't want to or you're not ready to commit them.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git stash pop</b>
+                    <p>copy</p>
+                </dt>
+                <dd>retrieves the last stashed changes to your current branch and cleans the stage.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git stash apply</b>
+                    <p>copy</p>
+                </dt>
+                <dd>retrieves the stashed changes to your current branch BUT doesn't clean the stage, so you can use the
+                    same
+                    stash on multiple branches.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git stash list</b>
+                    <p>copy</p>
+                </dt>
+                <dd>shows all saved stashes</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git stash apply stash@{number}</b>
+                    <p>copy</p>
+                </dt>
+                <dd>from stash list, you'll get the number of stash you wish to apply. This is helpful when you have
+                    multiple
+                    stashes saved</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git stash drop stash@{number}</b>
+                    <p>copy</p>
+                </dt>
+                <dd>deletes a single stash from the list of stashes</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git stash clear</b>
+                    <p>copy</p>
+                </dt>
+                <dd>deletes all stashes from the list, which ultimately would delete all changes</dd>
+            </div>
+        </section>
+
+        <section>
+            <h2>Checkout</h2>
+
+            <div class="card">
+                <dt><b>git checkout commitHash</b>
+                    <p>copy</p>
+                </dt>
+                <dd>goes to the point on time of that commit, in other words, show how the code was at the time of that
+                    commit.
+                    From there you can look around or create a new branch that will carry the code at that point.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git checkout master OR git switch master</b>
+                    <p>copy</p>
+                </dt>
+                <dd>takes you back to the most recent commit</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git checkout HEAD~number</b>
+                    <p>copy</p>
+                </dt>
+                <dd>number will be the number of commits you want to go back in time base on where the head is at the
+                    moment. So
+                    HEAD~1 will take you back to the previous commit from where HEAD is. Note it is not from the latest
+                    commit
+                    necessarily, it is from HEAD, which can be detached at the moment.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b></b>
+                    <p>copy</p>
+                </dt>
+                <dd></dd>
+            </div>
+
+            <div class="card">
+                <dt><b></b>
+                    <p>copy</p>
+                </dt>
+                <dd></dd>
+            </div>
+
+            <div class="card">
+                <dt><b></b>
+                    <p>copy</p>
+                </dt>
+                <dd></dd>
+            </div>
+
+            <div class="card">
+                <dt><b></b>
+                    <p>copy</p>
+                </dt>
+                <dd></dd>
+            </div>
+        </section>
+
+    </dl>
+</body>
+
+</html>
