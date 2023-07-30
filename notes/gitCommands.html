@@ -317,27 +317,49 @@
                     commit
                     necessarily, it is from HEAD, which can be detached at the moment.</dd>
             </div>
+        </section>
+
+        <section>
+            <h2>Undo Changes</h2>
 
             <div class="card">
-                <dt><b></b>
+                <dt><b>git restore fileName</b>
                     <p>copy</p>
                 </dt>
-                <dd></dd>
+                <dd>PERMANENTLY discards changes made in the repository (not staged or committed yet) since the last commit</dd>
             </div>
 
             <div class="card">
-                <dt><b></b>
+                <dt><b>git restore --staged fileName</b>
                     <p>copy</p>
                 </dt>
-                <dd></dd>
+                <dd>moves file from the staging area back to the working area</dd>
             </div>
 
             <div class="card">
-                <dt><b></b>
+                <dt><b>git reset commitHash</b>
                     <p>copy</p>
                 </dt>
-                <dd></dd>
+                <dd>will reset the repository back to a specific commit and move the extra commit(s) to the working tree</dd>
             </div>
+            
+            <div class="card">
+                <dt><b>git reset --hard commitHash</b>
+                    <p>copy</p>
+                </dt>
+                <dd>will PERMANENTLY reset the repository back to a specific commit. All the extra commits are gone!</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git revert commitHash</b>
+                    <p>copy</p>
+                </dt>
+                <dd>will reset the repository back to a specific commit by creating a new commit, this way history is preserved, which is a better idea when working in collaboration</dd>
+            </div>
+        </section>
+
+        <section>
+            <h2></h2>
 
             <div class="card">
                 <dt><b></b>
