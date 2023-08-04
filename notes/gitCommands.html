@@ -64,6 +64,13 @@
                 </dt>
                 <dd>unstages a staged file</dd>
             </div>
+
+            <div class="card">
+                <dt><b>git clone URL</b>
+                    <p>copy</p>
+                </dt>
+                <dd>copies the project from the URL to your computer. <i>REMEMBER</i> to double check with git status if you're not inside a repository before cloning a project.</dd>
+            </div>
         </section>
 
         <section>
@@ -139,6 +146,13 @@
                     you can force the deletion by using uppercase d, -D, instead of -d. Remember to leave the branch
                     before
                     deleting it.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git branch -M main</b>
+                    <p>copy</p>
+                </dt>
+                <dd>renames master to main</dd>
             </div>
         </section>
 
@@ -370,6 +384,61 @@
             </div>
         </section>
 
+        <section>
+            <h2>Remote</h2>
+
+            <div class="card">
+                <dt><b>git remote -v</b>
+                    <p>copy</p>
+                </dt>
+                <dd>show the URL of the project that git is linked to on GitHub.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git remote add origin URL</b>
+                    <p>copy</p>
+                </dt>
+                <dd>after creating a repository on GitHub, create a remote to link the local repository to GitHub. This way every time this name is used in the command line, while pushing for example, git knows where to send the changes. Origin is a conventional used name, but you can use whatever name you want.</dd>
+            </div>
+           
+            <div class="card">
+                <dt><b>git remote remove name</b>
+                    <p>copy</p>
+                </dt>
+                <dd>to remove the current remote</dd>
+            </div>
+        
+        </section>
+       
+        <section>
+            <h2>Push</h2>
+
+            <div class="card">
+                <dt><b>git push origin master</b>
+                    <p>copy</p>
+                </dt>
+                <dd>sends all commits to our origin remote, in this case, GitHub.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git push -u origin master</b>
+                    <p>copy</p>
+                </dt>
+                <dd>"permanently" connects the local branch to the cloud branch. By using this command once, you can start pushing with only "git push" </dd>
+            </div>
+        </section>
+       
+        <section>
+            <h2></h2>
+
+            <div class="card">
+                <dt><b></b>
+                    <p>copy</p>
+                </dt>
+                <dd></dd>
+            </div>
+        </section>
+       
         <section>
             <h2></h2>
 
