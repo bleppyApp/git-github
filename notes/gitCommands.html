@@ -21,6 +21,7 @@
 
         <h1>GIT Commands</h1>
 
+        <!----------------- BASIC COMMANDS ----------------->
         <section>
             <h2>Basic Commands</h2>
 
@@ -69,10 +70,12 @@
                 <dt><b>git clone URL</b>
                     <p>copy</p>
                 </dt>
-                <dd>copies the project from the URL to your computer. <i>REMEMBER</i> to double check with git status if you're not inside a repository before cloning a project.</dd>
+                <dd>copies the project from the URL to your computer. <i>REMEMBER</i> to double check with git status if
+                    you're not inside a repository before cloning a project.</dd>
             </div>
         </section>
 
+        <!----------------- COMMITS ----------------->
         <section>
             <h2>Commit</h2>
 
@@ -103,6 +106,7 @@
             </div>
         </section>
 
+        <!----------------- BRANCH ----------------->
         <section>
             <h2>Branch</h2>
 
@@ -154,8 +158,10 @@
                 </dt>
                 <dd>renames master to main</dd>
             </div>
+
         </section>
 
+        <!----------------- MERGE ----------------->
         <section>
             <h2>Merge</h2>
 
@@ -170,6 +176,7 @@
             </div>
         </section>
 
+        <!----------------- DIFF ----------------->
         <section>
             <h2>Diff</h2>
 
@@ -228,6 +235,7 @@
             </div>
         </section>
 
+        <!----------------- STASH ----------------->
         <section>
             <h2>Stash</h2>
 
@@ -288,16 +296,17 @@
             </div>
         </section>
 
+        <!----------------- SWITCH ----------------->
         <section>
             <h2>Switch</h2>
-            
+
             <div class="card">
                 <dt><b>git switch name_of_branch</b>
                     <p>copy</p>
                 </dt>
                 <dd>goes to the named branch</dd>
             </div>
-            
+
             <div class="card">
                 <dt><b>git switch -</b>
                     <p>copy</p>
@@ -314,6 +323,7 @@
 
         </section>
 
+        <!----------------- CHECKOUT ----------------->
         <section>
             <h2>Checkout</h2>
 
@@ -343,8 +353,10 @@
                     commit
                     necessarily, it is from HEAD, which can be detached at the moment.</dd>
             </div>
+
         </section>
 
+        <!----------------- UNDO CHANGES ----------------->
         <section>
             <h2>Undo Changes</h2>
 
@@ -352,7 +364,8 @@
                 <dt><b>git restore fileName</b>
                     <p>copy</p>
                 </dt>
-                <dd>PERMANENTLY discards changes made in the repository (not staged or committed yet) since the last commit</dd>
+                <dd>PERMANENTLY discards changes made in the repository (not staged or committed yet) since the last
+                    commit</dd>
             </div>
 
             <div class="card">
@@ -366,24 +379,28 @@
                 <dt><b>git reset commitHash</b>
                     <p>copy</p>
                 </dt>
-                <dd>will reset the repository back to a specific commit and move the extra commit(s) to the working tree</dd>
+                <dd>will reset the repository back to a specific commit and move the extra commit(s) to the working tree
+                </dd>
             </div>
-            
+
             <div class="card">
                 <dt><b>git reset --hard commitHash</b>
                     <p>copy</p>
                 </dt>
-                <dd>will PERMANENTLY reset the repository back to a specific commit. All the extra commits are gone!</dd>
+                <dd>will PERMANENTLY reset the repository back to a specific commit. All the extra commits are gone!
+                </dd>
             </div>
 
             <div class="card">
                 <dt><b>git revert commitHash</b>
                     <p>copy</p>
                 </dt>
-                <dd>will reset the repository back to a specific commit by creating a new commit, this way history is preserved, which is a better idea when working in collaboration</dd>
+                <dd>will reset the repository back to a specific commit by creating a new commit, this way history is
+                    preserved, which is a better idea when working in collaboration</dd>
             </div>
         </section>
 
+        <!----------------- REMOTE ----------------->
         <section>
             <h2>Remote</h2>
 
@@ -398,21 +415,24 @@
                 <dt><b>git remote add origin URL</b>
                     <p>copy</p>
                 </dt>
-                <dd>after creating a repository on GitHub, create a remote to link the local repository to GitHub. This way every time this name is used in the command line, while pushing for example, git knows where to send the changes. Origin is a conventional used name, but you can use whatever name you want.</dd>
+                <dd>after creating a repository on GitHub, create a remote to link the local repository to GitHub. This
+                    way every time this name is used in the command line, while pushing for example, git knows where to
+                    send the changes. Origin is a conventional used name, but you can use whatever name you want.</dd>
             </div>
-           
+
             <div class="card">
                 <dt><b>git remote remove name</b>
                     <p>copy</p>
                 </dt>
                 <dd>to remove the current remote</dd>
             </div>
-        
+
         </section>
-       
+
+        <!----------------- PUSH ----------------->
         <section>
             <h2>Push</h2>
-
+            <p class="highlight">NOTE: Before pushing anything, make sure to pull first.</p class="highlight">
             <div class="card">
                 <dt><b>git push origin master</b>
                     <p>copy</p>
@@ -424,12 +444,58 @@
                 <dt><b>git push -u origin master</b>
                     <p>copy</p>
                 </dt>
-                <dd>"permanently" connects the local branch to the cloud branch. By using this command once, you can start pushing with only "git push" </dd>
+                <dd>"permanently" connects the local branch to the cloud branch. By using this command once, you can
+                    start pushing with only "git push" </dd>
             </div>
         </section>
-       
+
+        <!----------------- WORKING IN COLLABORATION ----------------->
         <section>
-            <h2></h2>
+            <h2>Working in Collaboration</h2>
+
+            <div class="card" id="gitBranch-r">
+                <dt><b>git branch -r</b>
+                    <p>copy</p>
+                </dt>
+                <dd>lists the remote tracking branches.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git checkout origin/master</b>
+                    <p>copy</p>
+                </dt>
+                <dd>when working in collaboration, the repository will have 2 master branches, yours and the one that
+                    references where this branch was when you last communicated with GitHub. To checkout the later, you
+                    can you this command. <i>NOTE:</i> Both "origin" and "master" can have others names, depending on
+                    how the project was setup. To find out the project's info use: <a href="#gitBranch-r">git branch
+                        -r</a></dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git switch branchName</b>
+                    <p>copy</p>
+                </dt>
+                <dd>when you clone a repository, the only branch you see on "git branch" is "master" or equivalent.
+                    However, if you go to "git branch -r" you may find out that there are other branches on that repo.
+                    To access those, use "git switch" with the name of the desired branch.</dd>
+            </div>
+
+            <div class="card">
+                <dt><b>git fetch</b>
+                    <p>copy</p>
+                </dt>
+                <dt><b>git fetch origin</b>
+                    <p>copy</p>
+                </dt>
+                <dt><b>git fetch origin master</b>
+                    <p>copy</p>
+                </dt>
+                <dd>will download changes from a remote repository, but those changes will not be automatically
+                    integrated into your working files. You'll be able to see what others have been working on, without
+                    having to merge those changes into your local repo. You can fetch the whole project or just a
+                    branch. This command will update origin/master. Git fetch by itself defaults to origin, so if you
+                    want to fetch the whole thing, you can use just that.</dd>
+            </div>
 
             <div class="card">
                 <dt><b></b>
@@ -438,9 +504,20 @@
                 <dd></dd>
             </div>
         </section>
-       
+
+        <!----------------- PULL ----------------->
         <section>
-            <h2></h2>
+            <h2>Pull</h2>
+
+            <div class="card">
+                <dt><b>git pull origin branchName</b>
+                    <p>copy</p>
+                </dt>
+                <dd>it fetches all the changes on the branchName and merges it with the current working branch. So,
+                    where you are before the pull matters. In other words, if you're pulling master to update your local
+                    master, make sure to switch to master before pulling.
+                <p class="highlight">Because it will merge with your branch, make sure to commit your changes first.</p></dd>
+            </div>
 
             <div class="card">
                 <dt><b></b>

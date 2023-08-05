@@ -6,6 +6,14 @@ h2 {
     color:  darkslateblue;
 }
 
+.highlight {
+    color: rgb(228, 112, 66);
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 section {
     background-color: rgb(195, 214, 231);
     min-width: 400px;
@@ -19,8 +27,8 @@ section {
     padding: 25px;
     background-color: white;
     border-radius: 10px;
-    width: 20%;
-    min-width: 275px; 
+    width: 25%;
+    min-width: 350px; 
 }
 
 dt {
@@ -38,7 +46,6 @@ dd {
 }
 
 b {
-    color: cornflowerblue;
     color: lightsalmon;
 }
 
